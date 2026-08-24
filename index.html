@@ -1,1 +1,122 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LIQUI MOLY Cera Tec - Scrollytelling</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- GSAP + ScrollTrigger CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <main id="scrollytelling">
+
+    <!-- ESCENA 1: DESCENSO HACIA EL VEHÍCULO -->
+    <section id="scene1" class="scene">
+      <div class="scene1-layer sky"></div>
+      <div class="scene1-layer cityscape">
+        <div class="building" style="--left:10%; --height:150px"></div>
+        <div class="building" style="--left:25%; --height:130px"></div>
+        <div class="building" style="--left:40%; --height:200px"></div>
+        <div class="building" style="--left:55%; --height:170px"></div>
+        <div class="building" style="--left:70%; --height:140px"></div>
+        <div class="building" style="--left:85%; --height:190px"></div>
+      </div>
+      <div class="scene1-layer road"></div>
+      <div class="scene1-layer vehicle-container">
+        <div class="vehicle-placeholder" aria-label="Vehículo pequeño en carretera">
+          <div class="car-body"></div>
+          <div class="car-window"></div>
+          <div class="car-wheel front"></div>
+          <div class="car-wheel rear"></div>
+        </div>
+      </div>
+      <div class="fade-to-black"></div>
+    </section>
+
+    <!-- ESCENA 2: EL MOTOR Y EL PRODUCTO -->
+    <section id="scene2" class="scene">
+      <div class="motor-container">
+        <!-- Antes -->
+        <div class="motor-state before">
+          <div class="label-state">ANTES</div>
+          <div class="engine-parts contact">
+            <div class="piston"></div>
+            <div class="connecting-rod"></div>
+            <div class="crankshaft"></div>
+            <div class="metal-surface"></div>
+            <div class="friction-effects"></div>
+          </div>
+        </div>
+        <!-- Transición producto -->
+        <div class="product-intro">
+          <div class="product-placeholder" aria-label="Producto LIQUI MOLY Cera Tec">
+            <div class="product-logo">LIQUI MOLY</div>
+            <div class="product-name">CERA TEC</div>
+          </div>
+        </div>
+        <!-- Después -->
+        <div class="motor-state after">
+          <div class="label-state">DESPUÉS</div>
+          <div class="engine-parts protected">
+            <div class="piston"></div>
+            <div class="connecting-rod"></div>
+            <div class="crankshaft"></div>
+            <div class="metal-surface"></div>
+            <div class="protective-film"></div>
+          </div>
+        </div>
+        <!-- Beneficios (textos cortos) -->
+        <div class="benefits">
+          <ul>
+            <li>Menor fricción</li>
+            <li>Menor desgaste</li>
+            <li>Menor contacto directo</li>
+            <li>Protección en arranque frío</li>
+            <li>Funcionamiento más suave</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ESCENA 3: EL PASO DEL TIEMPO Y DESGASTE -->
+    <section id="scene3" class="scene">
+      <div class="wear-container">
+        <div class="divider-line"></div>
+        <div class="wear-left side">
+          <div class="label-side">Estado inicial</div>
+          <div class="engine-part surfaces clean"></div>
+          <div class="time-indicator">0 km</div>
+        </div>
+        <div class="wear-right side">
+          <div class="label-side">Estado con desgaste</div>
+          <div class="engine-part surfaces worn"></div>
+          <div class="time-indicator">150.000 km</div>
+        </div>
+      </div>
+
+      <div class="time-progress">
+        <div class="time-label">50.000 km</div>
+        <div class="time-label">100.000 km</div>
+      </div>
+
+      <div class="final-texts">
+        <p>La fricción no desaparece. El desgaste se acumula.</p>
+        <div class="final-product">
+          <div class="product-logo">LIQUI MOLY</div>
+          <div class="product-name">CERA TEC</div>
+        </div>
+        <p class="final-phrase">Protección para el motor donde más importa: en el movimiento.</p>
+      </div>
+
+    </section>
+
+  </main>
+</body>
+</html>
 
