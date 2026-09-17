@@ -1,68 +1,158 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Liqui Moly - Antifriccionante</title>
-
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FILTER FINDER | Buscador interno</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
 </head>
-
 <body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="FILTER FINDER inicio">
+      <span class="brand-mark">FF</span>
 
-    <main>
+      <span>
+        <strong>FILTER FINDER</strong>
+        <small>BUSCADOR INTERNO</small>
+      </span>
+    </a>
 
-        <!-- ESCENA PRINCIPAL -->
-        <section class="hero">
+    <button
+      id="themeToggle"
+      class="theme-toggle"
+      type="button"
+      aria-label="Cambiar modo de color"
+    >
+      ☾ <span>Modo nocturno</span>
+    </button>
+  </header>
 
-            <div class="hero-content">
+  <main class="container">
+    <section class="hero">
+      <div class="eyebrow">
+        <span></span>
+        CONSULTA RÁPIDA
+      </div>
 
-                <p class="eyebrow">LIQUI MOLY</p>
+      <h1>Encuentra el filtro correcto.</h1>
+      <p>Consulta rápida por vehículo, motor y año.</p>
+    </section>
 
-                <h1>
-                    La protección<br>
-                    comienza aquí.
-                </h1>
+    <section class="search-card" aria-labelledby="search-title">
+      <div class="section-heading">
+        <div>
+          <h2 id="search-title">Datos del vehículo</h2>
+          <p>Completa la información para realizar una búsqueda.</p>
+        </div>
 
-                <p class="description">
-                    Descubre cómo un antifriccionante puede cambiar
-                    la forma en que el motor trabaja.
-                </p>
+        <span class="demo-badge">MODO DEMO</span>
+      </div>
 
-                <div class="scroll-indicator">
-                    <span>SCROLL</span>
-                    <span class="arrow">↓</span>
-                </div>
+      <form id="filterForm" novalidate>
+        <div class="fields">
+          <label>
+            Marca
+            <input
+              id="brand"
+              name="brand"
+              type="text"
+              placeholder="Toyota"
+              autocomplete="off"
+            />
+          </label>
 
-            </div>
+          <label>
+            Modelo
+            <input
+              id="model"
+              name="model"
+              type="text"
+              placeholder="Corolla"
+              autocomplete="off"
+            />
+          </label>
 
-        </section>
+          <label>
+            Año
+            <input
+              id="year"
+              name="year"
+              type="text"
+              inputmode="numeric"
+              placeholder="2016"
+              maxlength="4"
+            />
+          </label>
 
-        <!-- SEGUNDA ESCENA -->
-        <section class="product-section">
+          <label>
+            Motor
+            <input
+              id="engine"
+              name="engine"
+              type="text"
+              placeholder="1.8 2ZR-FE"
+              autocomplete="off"
+            />
+          </label>
+        </div>
 
-            <div class="product-content">
+        <div class="actions">
+          <button class="primary" type="submit">
+            🔎 Buscar filtro
+          </button>
 
-                <p class="eyebrow">ANTIFRICCIONANTE</p>
+          <button id="clearBtn" class="secondary" type="button">
+            Limpiar
+          </button>
+        </div>
+      </form>
 
-                <h2>
-                    Menos fricción.<br>
-                    Más protección.
-                </h2>
+      <div
+        id="result"
+        class="result"
+        role="status"
+        aria-live="polite"
+        hidden
+      ></div>
+    </section>
 
-                <p>
-                    Aquí comenzaremos a explicar de manera visual
-                    qué sucede dentro del motor.
-                </p>
+    <section class="info-grid" aria-label="Proceso futuro">
+      <article class="info-card">
+        <div class="info-icon">✓</div>
 
-            </div>
+        <div>
+          <h3>Consulta externa</h3>
+          <p>Determinará primero la aplicación del vehículo.</p>
+        </div>
+      </article>
 
-        </section>
+      <article class="info-card">
+        <div class="info-icon">✓</div>
 
-    </main>
+        <div>
+          <h3>Validación Excel</h3>
+          <p>
+            Comprobará después si el código existe en el archivo interno.
+          </p>
+        </div>
+      </article>
 
-    <script src="script.js"></script>
+      <article class="info-card">
+        <div class="info-icon">✓</div>
 
+        <div>
+          <h3>Casos guardados</h3>
+          <p>
+            Permitirá reutilizar aplicaciones que ya fueron verificadas.
+          </p>
+        </div>
+      </article>
+    </section>
+
+    <p class="prototype-note">
+      Prototipo visual · Las conexiones externas se agregarán posteriormente.
+    </p>
+  </main>
 </body>
 </html>
